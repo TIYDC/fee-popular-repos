@@ -6,10 +6,9 @@
     <input type='submit' value='Get Repos' class='btn btn-primary'>
 </form>
 
-<section class='gh-repos'>
-    <ul>
-        <li ng-repeat='repo in reposCtrl.list'>
-            <section class='gh-repo'>{{repo.name}}</section>
-        </li>
-    </ul>
-</section>
+
+
+<repo ng-repeat='repo in reposCtrl.list' repo='repo'></repo>
+
+
+

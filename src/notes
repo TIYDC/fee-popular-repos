@@ -1,0 +1,14 @@
+We have an already existing app which takes in a GH personal access token and then
+a username and retrieves a list of repositories for that user. Your task is to create a
+directive that we can use on other pages of this site in the future anytime we want to
+ show a repository. This directive should use Bootstrap's "panels" with a header and body.
+ Use your new directive in the existing template instead of the current ul/li structure.
+ Just to be clear: there should be NO list at all.
+
+
+
+ 1. DONE clone repo
+ 2. make a directive that shows the repository
+ 3. use Bootstraps panels (w/ a header an body)
+ 4. use the new directive to replace the current ul/li.
+    Just to be clear: there should be NO list at all.
