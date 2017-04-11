@@ -1,14 +1,14 @@
-<article class='panel panel-info col-xs-10 col-s-6 col-md-4 col-lg-3'>
+<article class='panel panel-info'>
 
   <header class='panel-heading'>
     <h3><a href='{{repo.url}}'>{{repo.name}}</a></h3>
   </header>
 
   <section class='panel-body'>
-    <p><strong>Owner: </strong>{{repo.owner.login}}</p>
-    <p><strong>Stars: </strong>{{repo.stargazers_count}}</p>
-    <p><strong>Size: </strong>{{repo.size}}</p>
-    <p><strong>Language: </strong>{{repo.language}}</p>
+    <h5>Owner: {{repo.owner.login}}</h5>
+    <h5>Stars: {{repo.stargazers_count}}</h5>
+    <h5>Size: {{repo.size}}</h5>
+    <h5>Language: {{repo.language}}</h5>
   </section>
 
 </article>
