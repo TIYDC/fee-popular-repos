@@ -10,7 +10,7 @@
         <link rel='stylesheet' href='/css/style.css'>
     </head>
     <body>
-        <main>
+        <main class='container-fluid'>
             <header ng-controller='HeaderController as header'>
                 <h1>GitHub Repos</h1>
                 <form ng-submit='header.saveToken()'>
@@ -23,12 +23,13 @@
         </main>
 
         <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js'></script>
-        <script src='http://angular-ui.github.io/ui-router/release/angular-ui-router.js'></script>
+        <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
 
         <script src='/app/gh.module.js'></script>
         <script src='/repos/user-repos.controller.js'></script>
         <script src='/repos/github.service.js'></script>
         <script src='/app/header.controller.js'></script>
+        <script src='/repos/repos.directive.js'></script>
 
     </body>
 </html>
