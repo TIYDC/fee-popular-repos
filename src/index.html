@@ -12,7 +12,7 @@
   <link rel='stylesheet' href='/css/style.css'>
 </head>
 <body>
-  <main class='container-fluid'>
+  <main class='container'>
     <header ng-controller='HeaderController as header'>
       <h1>GitHub Repos</h1>
       <form ng-submit='header.saveToken()'>
@@ -29,7 +29,7 @@
   <script src='/repos/user-repos.controller.js'></script>
   <script src='/repos/github.service.js'></script>
   <script src='/app/header.controller.js'></script>
-  <script src='/repos/repos.directive.js'></script>
+  <script src='/repos/repo.directive.js'></script>
   <script src='/repos/popularity.filter.js'></script>
   <script src='/repos/size.filter.js'></script>
 </body>

@@ -2,21 +2,21 @@
   'use strict';
 
   angular.module('gh')
-  .directive('repos', Repos);
+  .directive('repo', Repo);
 
   /**
   * Constructor for the repo directive
   * @return {Object} Template and scope object representing the directive
   */
-  function Repos() {
+  function Repo() {
 
     return {
       templateUrl: 'repos/repo.template.html',
       restrict: 'E',
       scope: {
-        repo: '=repo'
+        repo: '='
       },
-      link: setUpCollapse
+      link: setupCollapse
     };
 
     function setupCollapse(scope, element) {
