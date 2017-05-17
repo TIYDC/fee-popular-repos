@@ -5,5 +5,4 @@
   <input type='submit' value='Get Repos' class='btn btn-primary'>
 </form>
 
-<repos ng-repeat='repo in reposCtrl.list' repo='repo'>
-</repos>
+<Repos ng-repeat='repo in reposCtrl.list | popularity' repo='repo'></Repos>

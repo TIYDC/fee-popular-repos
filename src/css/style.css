@@ -3,13 +3,19 @@
   display: inline-block;
 }
 
-.panel {
-  padding: 0;
-  margin: 1em;
+.hidden {
+  display: none;
 }
-/*
-.gh-repo:hover {
-  background-color: #222;
-  color: #fff;
-  cursor: pointer;
-}*/
+
+.page-content {
+  display: flex;
+  flex-flow: column;;
+}
+
+.panel-body:hover {
+    border: 2px solid rgb(158, 209, 252);
+}
+
+.title {
+  font-size: 1.5em;
+}

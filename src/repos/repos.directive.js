@@ -2,20 +2,29 @@
   'use strict';
 
   angular.module('gh')
-  .directive('repo', repo);
+  .directive('repos', Repos);
 
   /**
   * Constructor for the repo directive
   * @return {Object} Template and scope object representing the directive
   */
-  function repo() {
+  function Repos() {
 
     return {
-      templateUrl: 'repos/panel.template.html',
-      restrict: 'EA',
+      templateUrl: 'repos/repo.template.html',
+      restrict: 'E',
       scope: {
         repo: '=repo'
-      }
+      },
+      link: setUpCollapse
     };
+
+    function setupCollapse(scope, element) {
+      $(element)
+      .find('header')
+      .on('click', function togglePanelBody() {
+        $(element).find('article').toggleClass('hidden');
+      });
+    }
   }
 }());
