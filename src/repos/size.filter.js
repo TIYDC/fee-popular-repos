@@ -6,13 +6,13 @@
 
   /**
   * Determines the repo size in MBs
-  * @param  {Number} repo Number data pulled from the repo
+  * @param  {Number} repoSize Number data pulled from the repo
   * @return {Number}
   */
   function size() {
-    return function thisSize(repo) {
-      let theSize = repo / 1000;
-      return theSize.toFixed(2) + ' MBs';
+    return function thisSize(repoSize) {
+      let theSize = repoSize / 1000;
+      return theSize.toFixed(4) + ' MBs';
     };
   }
 }());
