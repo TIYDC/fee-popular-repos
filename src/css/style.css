@@ -2,10 +2,10 @@
   width: 20em;
   display: inline-block;
 }
-
-article p {
+/*
+.details {
   padding-left: 1em;
-}
+}*/
 
 .hidden {
   display: none;
