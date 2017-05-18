@@ -7,18 +7,19 @@
   function popularity() {
 
     /**
-    * Uses repos array and sorts it according to popularity
-    * @param  {Array} repos array data from the api
-    * @return {Array}       returns either a -1, 1, or 0
+    * Sorts repos[] returned from github api according to a chosen popularity calculation: (Number of stars + twice the number of forks + half the number of open issues)
+    * @param  {Array} repos array of repos from github api
+    * @return {Array}       returns the sorted repos[] based on popularity count (calculated in service)
     */
-    return function mostPopular(repos) {
+    return function poularitySort(repos) {
       if (!Array.isArray(repos)) {
         return repos;
       }
-      return [].concat(repos).sort(function sort(firstRepo, secondRepo) {
-        let firstCopy = (firstRepo.stargazers_count) + (2 * firstRepo.forks_count) + (firstRepo.open_issues_count / 2);
-        let secondCopy = (secondRepo.stargazers_count) + (2 * secondRepo.forks_count) + (secondRepo.open_issues_count / 2);
-        return secondCopy - secondCopy;
+
+      let reposCollection = [].concat(repos);
+
+      return reposCollection.sort(function sortRepos(firstRepo, secondRepo) {
+        return secondRepo.popularity - firstRepo.popularity;
       });
     };
   }
