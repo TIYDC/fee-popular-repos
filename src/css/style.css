@@ -2,10 +2,14 @@
   width: 20em;
   display: inline-block;
 }
-/*
+
 .details {
   padding-left: 1em;
-}*/
+}
+
+.lower-margin {
+  margin-bottom: 2em;
+}
 
 .hidden {
   display: none;
