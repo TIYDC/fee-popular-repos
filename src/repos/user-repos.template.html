@@ -1,15 +1,8 @@
-
 <h2>GitHub Address Book</h2>
 
-<form ng-submit='reposCtrl.lookup(reposCtrl.user.login)'>
-    <input type='text' ng-model='reposCtrl.user.login' placeholder='GH Username' class='form-control'>
-    <input type='submit' value='Get Repos' class='btn btn-primary'>
+<form class='lower-margin' ng-submit='reposCtrl.lookup(reposCtrl.user.login)'>
+  <input type='text' ng-model='reposCtrl.user.login' placeholder='GH Username' class='form-control'>
+  <input type='submit' value='Get Repos' class='btn btn-primary'>
 </form>
 
-<section class='gh-repos'>
-    <ul>
-        <li ng-repeat='repo in reposCtrl.list'>
-            <section class='gh-repo'>{{repo.name}}</section>
-        </li>
-    </ul>
-</section>
+<repo ng-repeat='repo in reposCtrl.list | popularity' repo='repo'></repo>
