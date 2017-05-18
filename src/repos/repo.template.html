@@ -1,28 +1,28 @@
 <section class='panel panel-default'>
   <header class='panel-heading'>
     <h2>{{repo.name}}</h2>
-    <p> {{repo.description}}</p>
+    <p>{{repo.description}}</p>
   </header>
-  <article class='panel-body'>
+  <article class='panel-body hidden'>
     <aside>
       <h3 class='title'>Created on:</h3>
-      <p>{{repo.created_at | date : 'short'}}</p>
+      <p class='details'>{{repo.created_at | date : 'short'}}</p>
     </aside>
     <aside>
       <h3 class='title'>Last modified:</h3>
-      <p>{{repo.updated_at | date : 'short'}}</p>
+      <p class='details'>{{repo.updated_at | date : 'short'}}</p>
     </aside>
     <aside>
       <h3 class='title'>Clone url:</h3>
-      <p>{{repo.clone_url}}></p>
+      <p class='details'>{{repo.clone_url}}</p>
     </aside>
     <aside>
       <h3 class='title'>Repo Size:</h3>
-      <p>{{repo.size | size}}</p>
+      <p class='details'>{{repo.size | size}}</p>
     </aside>
     <aside>
       <h3 class='title'>Popularity:</h3>
-      <p>{{ repo.popularity}}</p>
+      <p class='details'>{{repo.popularity}}</p>
     </aside>
   </article>
 </section>

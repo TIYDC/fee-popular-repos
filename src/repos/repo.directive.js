@@ -20,6 +20,7 @@
     };
 
     function setupCollapse(scope, element) {
+      let $ = angular.element;
       $(element)
       .find('header')
       .on('click', function togglePanelBody() {

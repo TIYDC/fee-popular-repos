@@ -9,6 +9,7 @@
     let vm = this;
     vm.list = [];
     vm.user = {};
+    let $ = angular.element;
 
     vm.lookup = function lookup(user) {
       GithubService.getRepos(user)
