@@ -30,16 +30,18 @@
       }
 
       return $http({
-        url: 'https://api.github.com/users/${user}/repos',
+        url: `https://api.github.com/users/${user}/repos`,
         headers: {
           Authorization: 'token ' + _token
         }
       }).then(function handleResponse(response) {
         console.log('Response from GitHub:', response);
         return response.data;
+      }).catch(function handleError(err) {
+        console.error('Error retrieving repos: ', err);
       });
     }
-    
+
     return {
       setUserToken: setUserToken,
       getUserToken: getUserToken,
